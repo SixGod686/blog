@@ -16,3 +16,7 @@ def newlist(request):
 
 def share(request):
     return render(request,'share.html')
+
+
+def login(request):
+    return render(request,'login.html')

@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^new/$',views.new,name='new'),
     url(r'^newlist/$',views.newlist,name='newlist'),
     url(r'^share/$',views.share,name='share'),
+    url(r'^login/$',views.login,name='login'),
 ]
