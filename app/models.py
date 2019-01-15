@@ -6,6 +6,7 @@ from django.utils import timezone
 
 # 用户表
 class User(models.Model):
+    icon = models.ImageField(upload_to='headimages')
     username = models.CharField(verbose_name='用户名',max_length=32)
     password = models.CharField(verbose_name='密码',max_length=32)
     phone = models.CharField(verbose_name='手机号',max_length=32)
