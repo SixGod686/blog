@@ -17,15 +17,15 @@
 <body>
 <div class="ibody">
   <header>
-    <h1>如影随形</h1>
+    <h1>{{ user.username }}的博客</h1>
     <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
-    <div class="logo"><a href="{% url 'app:index' %}"></a></div>
-    <nav id="topnav"><a href="{% url 'app:index' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
+    <div class="logo"><a href="{% url 'app:dologin' %}"></a></div>
+    <nav id="topnav"><a href="{% url 'app:dologin' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
                 href="{% url 'app:newlist' %}">我的日记</a><a href="{% url 'app:share' %}">分享</a><a
                 href="{% url 'app:new' %}">生活</a></nav>
   </header>
   <article>
-    <h3 class="about_h">您现在的位置是：<a href="{% url 'app:index' %}">首页</a>><a href="{% url 'app:about' %}">关于我</a></h3>
+    <h3 class="about_h">您现在的位置是：<a href="{% url 'app:dologin' %}">首页</a>><a href="{% url 'app:about' %}">关于我</a></h3>
     <div class="about">
       <h2>Just about me</h2>
       <ul>
@@ -44,20 +44,16 @@
     </div>
   </article>
   <aside>
-    <div class="avatar"><a href="{% url 'app:about' %}"><span>关于杨青</span></a></div>
+    <div class="avatar"><a href="{% url 'app:about' %}"><img src="{{ url }}" style="margin: -100px auto; width: 160px; height: 160px; border-radius: 100%; "><span>关于{{ user.username }}</span></a></div>
     <div class="topspaceinfo">
       <h1>执子之手，与子偕老</h1>
       <p>于千万人之中，我遇见了我所遇见的人....</p>
     </div>
     <div class="about_c">
-      <p>网名：DanceSmile | 即步非烟</p>
-      <p>职业：Web前端设计师、网页设计 </p>
-      <p>籍贯：四川省―成都市</p>
-      <p>电话：13662012345</p>
-      <p>邮箱：dancesmiling@qq.com</p>
-      <p><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E" ><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_22.png" alt="杨青个人博客网站"></a></p>
-      <p> 
-        <!--以下是QQ邮件列表订阅嵌入代码--><a target="_blank" href="http://list.qq.com/cgi-bin/qf_invite?id=65fb9b3618916f162973471ebc5b97ff786efae0ec9a863e"><img border="0" alt="填写您的邮件地址，订阅我们的精彩内容：" src="http://rescdn.list.qq.com/zh_CN/htmledition/images/qunfa/manage/picMode_light_m.png" /></a> </p>
+      <p>职业：{{ user.profession }} </p>
+      <p>籍贯：{{ user.native_place }}</p>
+      <p>电话：{{ user.phone }}</p>
+      <p>邮箱：{{ user.email }}</p>
     </div>
   </aside>
   <script src="/static/js/silder.js"></script>

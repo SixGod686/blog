@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pure_pagination',
     'app',
 ]
 
@@ -127,4 +128,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
+
 MEDIA_ROOT=os.path.join(BASE_DIR,r'static/upload')
+
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED':3,
+    'MARGIN_PAGES_DISPLAYED':2,
+    'SHOW_FIRST_PAGE_WHEN_INVALID':True,
+}

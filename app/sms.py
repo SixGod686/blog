@@ -1,11 +1,14 @@
-import re
 import sys
-import uuid
+import re
 from random import randint
 
-from aliyunsdkcore.client import AcsClient
-from aliyunsdkcore.profile import region_provider
 from aliyunsdkdysmsapi.request.v20170525 import SendSmsRequest
+from aliyunsdkdysmsapi.request.v20170525 import QuerySendDetailsRequest
+from aliyunsdkcore.client import AcsClient
+import uuid
+from aliyunsdkcore.profile import region_provider
+from aliyunsdkcore.http import method_type as MT
+from aliyunsdkcore.http import format_type as FT
 from app import const
 
 """
@@ -72,7 +75,7 @@ class SMS:
         return smsResponse
 
 if __name__ == "__main__":
-    sms = SMS('SixGod','SMS_151547936')
+    sms = SMS('明天是个好日子','SMS_151547936')
 
     while 1:
         phone = input("请输入你的手机号：")
@@ -90,4 +93,4 @@ if __name__ == "__main__":
     if num == data:
         print("验证成功")
     else:
-        print("验证失败，3秒后请重新验证！")
+        print("验证失败，30秒请重新验证！")

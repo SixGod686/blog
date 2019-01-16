@@ -19,16 +19,16 @@
     <header>
         <h1>如影随形</h1>
         <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
-        <div class="logo"><a href="{% url 'app:index' %}"></a></div>
-        <nav id="topnav"><a href="{% url 'app:index' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
+        <div class="logo"><a href="{% url 'app:dologin' %}"></a></div>
+        <nav id="topnav"><a href="{% url 'app:dologin' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
                 href="{% url 'app:newlist' %}">我的日记</a><a href="{% url 'app:share' %}">分享</a><a
                 href="{% url 'app:new' %}">生活</a></nav>
     </header>
     <article>
-        <h2 class="about_h">您现在的位置是：<a href="{% url 'app:index' %}">首页</a>><a href="{% url 'app:newlist' %}">我的日记</a>
+        <h2 class="about_h">您现在的位置是：<a href="{% url 'app:dologin' %}">首页</a>><a href="{% url 'app:newlist' %}">我的日记</a>
         </h2>
         <div class="bloglist">
-            {% for blog in blogs %}
+
                 <div class="newblog">
                     <ul>
                         <h3><a href="/">个人博客从简不繁</a></h3>
@@ -39,7 +39,7 @@
                     <figure><img src="/static/images/001.jpg"></figure>
                     <div class="dateview">{{ blog.modify_time }}</div>
                 </div>
-            {% endfor %}
+
         </div>
         <div class="page"><a title="Total record"><b>113</b></a><b>1</b><a href="/">2</a><a href="/">3</a><a
                 href="/">4</a><a href="/">5</a><a href="/">&gt;</a><a href="/">&gt;&gt;</a></div>

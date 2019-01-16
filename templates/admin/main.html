@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>写文章 - 异清轩博客管理系统</title>
+    <title>写文章 - 博客管理系统</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css1/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css1/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css1/font-awesome.min.css' %}">
@@ -31,14 +31,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="">消息 <span class="badge">1</span></a></li>
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-haspopup="true" aria-expanded="false">admin <span
-                                class="caret"></span></a>
+                                                aria-haspopup="true" aria-expanded="false">{{ users.username }} <span class="caret"></span></a>
                             <ul class="dropdown-menu dropdown-menu-left">
                                 <li><a title="查看或修改个人信息" data-toggle="modal" data-target="#seeUserInfo">个人信息</a></li>
                                 <li><a title="查看您的登录记录" data-toggle="modal" data-target="#seeUserLoginlog">登录记录</a></li>
                             </ul>
                         </li>
-                        <li><a href="{% url 'app:adminindex' %}" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a>
+                        <li><a href="{% url 'app:savedate' %}" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a>
                         </li>
                         <li><a data-toggle="modal" data-target="#WeChat">帮助</a></li>
                     </ul>
@@ -104,7 +103,7 @@
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <h4>文章</h4>
-                    <span class="text-muted">0 条</span></div>
+                    <span class="text-muted">{{ blog_nums }} 条</span></div>
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <h4>评论</h4>
                     <span class="text-muted">0 条</span></div>
@@ -120,10 +119,10 @@
                 <table class="table table-striped table-hover">
                     <tbody>
                     <tr>
-                        <td>登录者: <span>admin</span>，这是您第 <span>13</span> 次登录</td>
+                        <td>登录者: <span>{{ users.username }}</span>，这是您第 <span>{{ users.login_nums }}</span> 次登录</td>
                     </tr>
                     <tr>
-                        <td>上次登录时间: 2016-01-08 15:50:28 , 上次登录IP: ::1:55570</td>
+                        <td>上次登录IP: {{ users.ip }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -136,40 +135,32 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>管理员个数:</td>
-                        <td>2 人</td>
-                        <td>服务器软件:</td>
-                        <td>Apache/2.4.10 (Win32) OpenSSL/1.0.1i mod_fcgid/2.3.9</td>
-                    </tr>
-                    <tr>
                         <td>浏览器:</td>
                         <td>Chrome47</td>
-                        <td>PHP版本:</td>
-                        <td>5.6.1</td>
+                    </tr>
+                    <tr>
+                        <td>Django版本:</td>
+                        <td>1.11.11</td>
                     </tr>
                     <tr>
                         <td>操作系统:</td>
-                        <td>Windows 10</td>
-                        <td>PHP运行方式:</td>
-                        <td>CGI-FCGI</td>
+                        <td>Ubuntu</td>
                     </tr>
                     <tr>
                         <td>登录者IP:</td>
-                        <td>::1:55570</td>
-                        <td>MYSQL版本:</td>
-                        <td>5.5.40</td>
+                        <td>{{ id }}</td>
                     </tr>
                     <tr>
-                        <td>程序版本:</td>
-                        <td class="version">YlsatCMS v 1.0 <font size="-6" color="#BBB">(20160108160215)</font></td>
-                        <td>上传文件:</td>
-                        <td>可以 <font size="-6" color="#BBB">(最大文件：2M ，表单：8M )</font></td>
+                        <td>PyMySql版本:</td>
+                        <td>0.9.3</td>
                     </tr>
                     <tr>
                         <td>程序编码:</td>
                         <td>UTF-8</td>
-                        <td>当前时间:</td>
-                        <td>2016-01-08 15:50:30</td>
+                    </tr>
+                    <tr>
+                        <td>此次登录时间:</td>
+                        <td>{{ users.date }}</td>
                     </tr>
                     </tbody>
                     <tfoot>
@@ -215,34 +206,29 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td wdith="20%">姓名:</td>
-                            <td width="80%"><input type="text" value="王雨" class="form-control" name="truename"
-                                                   maxlength="10" autocomplete="off"/></td>
-                        </tr>
-                        <tr>
                             <td wdith="20%">用户名:</td>
-                            <td width="80%"><input type="text" value="admin" class="form-control" name="username"
+                            <td width="80%"><input type="text" value="{{ users.username }}" class="form-control" name="username"
                                                    maxlength="10" autocomplete="off"/></td>
                         </tr>
                         <tr>
                             <td wdith="20%">电话:</td>
-                            <td width="80%"><input type="text" value="18538078281" class="form-control" name="usertel"
+                            <td width="80%"><input type="text" value="{{ users.phone }}" class="form-control" name="usertel"
                                                    maxlength="13" autocomplete="off"/></td>
                         </tr>
                         <tr>
-                            <td wdith="20%">旧密码:</td>
-                            <td width="80%"><input type="password" class="form-control" name="old_password"
+                            <td wdith="20%">职业:</td>
+                            <td width="80%"><input type="text" value="{{ users.profession }}" class="form-control" name="old_password"
                                                    maxlength="18" autocomplete="off"/></td>
                         </tr>
                         <tr>
-                            <td wdith="20%">新密码:</td>
-                            <td width="80%"><input type="password" class="form-control" name="password" maxlength="18"
+                            <td wdith="20%">籍贯:</td>
+                            <td width="80%"><input type="text" value="{{ users.native_place }}" class="form-control" name="password"
                                                    autocomplete="off"/></td>
                         </tr>
                         <tr>
-                            <td wdith="20%">确认密码:</td>
-                            <td width="80%"><input type="password" class="form-control" name="new_password"
-                                                   maxlength="18" autocomplete="off"/></td>
+                            <td wdith="20%">邮箱:</td>
+                            <td width="80%"><input type="text" value="{{ users.email }}" class="form-control" name="new_password"
+                                                    autocomplete="off"/></td>
                         </tr>
                         </tbody>
                         <tfoot>
@@ -252,7 +238,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" class="btn btn-primary">提交</button>
                 </div>
             </div>
         </form>

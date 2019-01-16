@@ -3,14 +3,13 @@ from django.conf.urls import url
 from app import views
 
 urlpatterns = [
-    url(r'^index/$',views.index,name='index'),
     url(r'^dologin/$',views.dologin,name='dologin'),
     url(r'^about/$',views.about,name='about'),
     url(r'^new/$',views.new,name='new'),
     url(r'^newlist/$',views.newlist,name='newlist'),
     url(r'^share/$',views.share,name='share'),
     url(r'^login/$',views.login,name='login'),
-    # url(r'^send/$',views.send,name='send'),
+    url(r'^send/$',views.send,name='send'),
     url(r'^register/$',views.register,name='register'),
 
     #后台登录
@@ -34,4 +33,5 @@ urlpatterns = [
     url(r'^update_flink/$',views.update_flink,name='update_flink'),
     url(r'^update_category/$',views.update_category,name='update_category'),
     url(r'^update_article/$',views.update_article,name='update_article'),
+    url(r'^savedate/$',views.savedate,name='savedate')
 ]

@@ -17,20 +17,20 @@
 <body>
 <div class="ibody">
     <header>
-        <h1>如影随形</h1>
+        <h1>{{ user.username }}的博客</h1>
         <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
-        <div class="logo"><a href="{% url 'app:index' %}"></a></div>
-        <nav id="topnav"><a href="{% url 'app:index' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
+        <div class="logo"><a href="{% url 'app:dologin' %}"></a></div>
+        <nav id="topnav"><a href="{% url 'app:dologin' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
                 href="{% url 'app:newlist' %}">我的日记</a><a href="{% url 'app:share' %}">分享</a><a
                 href="{% url 'app:new' %}">生活</a></nav>
     </header>
     <article>
-        <h2 class="about_h">您现在的位置是：<a href="{% url 'app:index' %}">首页</a>><a href="{% url 'app:share' %}">分享</a>><a
+        <h2 class="about_h">您现在的位置是：<a href="{% url 'app:dologin' %}">首页</a>><a href="{% url 'app:share' %}">分享</a>><a
                 href="{% url 'app:new' %}">生活</a></h2>
         <div class="index_about">
             {% for blog in blogs %}
                 <h2 class="c_titile">{{ blog.title }}</h2>
-                <p class="box_c"><span class="d_time">发布时间：{{ blog.modify_time }}</span><span>编辑：</span><span>浏览（390）</span><span>评论览（14）</span>
+                <p class="box_c"><span class="d_time">发布时间：{{ blog.modify_time }}</span><span>编辑：</span><span>浏览{{ blog.click_nums }}</span><span>评论览（14）</span>
                 </p>
                 <ul class="infos">
                     <p>
@@ -78,29 +78,17 @@
                 <p>点击排行</p>
             </h2>
             <ul class="ph_n">
-                <li><span class="num1">1</span><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
-                <li><span class="num2">2</span><a href="/">励志人生-要做一个潇洒的女人</a></li>
-                <li><span class="num3">3</span><a href="/">女孩都有浪漫的小情怀――浪漫的求婚词</a></li>
-                <li><span>4</span><a href="/">Green绿色小清新的夏天-个人博客模板</a></li>
-                <li><span>5</span><a href="/">女生清新个人博客网站模板</a></li>
-                <li><span>6</span><a href="/">Wedding-婚礼主题、情人节网站模板</a></li>
-                <li><span>7</span><a href="/">Column 三栏布局 个人网站模板</a></li>
-                <li><span>8</span><a href="/">时间煮雨-个人网站模板</a></li>
-                <li><span>9</span><a href="/">花气袭人是酒香―个人网站模板</a></li>
+                {% for blog in blogs %}
+                <li><span class="num1">1</span><a href="/">{{ blog.title }}</a></li>
+                {% endfor %}
             </ul>
             <h2>
                 <p>栏目推荐</p>
             </h2>
             <ul>
-                <li><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
-                <li><a href="/">励志人生-要做一个潇洒的女人</a></li>
-                <li><a href="/">女孩都有浪漫的小情怀――浪漫的求婚词</a></li>
-                <li><a href="/">Green绿色小清新的夏天-个人博客模板</a></li>
-                <li><a href="/">女生清新个人博客网站模板</a></li>
-                <li><a href="/">Wedding-婚礼主题、情人节网站模板</a></li>
-                <li><a href="/">Column 三栏布局 个人网站模板</a></li>
-                <li><a href="/">时间煮雨-个人网站模板</a></li>
-                <li><a href="/">花气袭人是酒香―个人网站模板</a></li>
+                {% for blog in blogs %}
+                <li><a href="/">{{ blog.title }}</a></li>
+                {% endfor %}
             </ul>
             <h2>
                 <p>最新评论</p>

@@ -20,8 +20,8 @@
     <header>
         <h1>{{ users.username }}的博客</h1>
         <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
-        <div class="logo"><a href="{% url 'app:index' %}"></a></div>
-        <nav id="topnav"><a href="{% url 'app:index' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
+        <div class="logo"><a href="{% url 'app:dologin' %}"></a></div>
+        <nav id="topnav"><a href="{% url 'app:dologin' %}">首页</a><a href="{% url 'app:about' %}">关于我</a><a
                 href="{% url 'app:newlist' %}">我的日记</a><a href="{% url 'app:share' %}">分享</a><a
                 href="{% url 'app:new' %}">生活</a></nav>
     </header>
@@ -35,16 +35,12 @@
         <div class="bloglist">
             {% for blog in blogs %}
                         <div class="blogs">
-
                             <h3><a href="/">{{ blog.title }}</a></h3>
-
-                            <figure><img src="{{ users.icon }}"></figure>
                             <ul>
                                 <div style="height:100px;overflow: hidden">
                                     {{ blog.content }}
                                 </div>
-
-                                <a href="{% url 'app:showcontent' %}" target="_blank" class="readmore" name="looked">阅读全文&gt;&gt;</a>
+                                <a href="/" target="_blank" class="readmore" name="looked">阅读全文&gt;&gt;</a>
                             </ul>
                             <p class="autor">
                                 <span>作者：</span>{{ users.username }}
@@ -53,13 +49,13 @@
                                 <span>评论（<a href="/">{{ comm.comment_nums }}</a>）</span>
                                 <span>发表于：{{ blog.modify_time }}</span>
                             </p>
-                            <div class="dateview" style="width: 300px"></div>
+                            <div class="dateview" style="width: 300px;overflow: hidden">{{ blog.category }}</div>
                         </div>
             {% endfor %}
     </article>
     {% block body %}
         <aside>
-            <div class="avatar"><a href="{% url 'app:about' %}"><span>关于{{ users.username }}</span></a></div>
+            <div class="avatar"><a href="{% url 'app:about' %}"> <img src="{{ url }}" style="margin: -100px auto; width: 160px; height: 160px; border-radius: 100%; "> <span>关于{{ users.username }}</span></a></div>
             <div class="topspaceinfo">
                 <h1>江湖就是人情世故</h1>
                 <p>你若要喜爱你自己的价值，你就得给世界创造价值。</p>
