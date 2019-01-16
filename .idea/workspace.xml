@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b15910a5-fc80-4cd4-8d4f-68213cd2e55d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e5e4251c-b4e1-42a0-a3b3-bf56eef79da3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e5e4251c-b4e1-42a0-a3b3-bf56eef79da3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20190114_1658.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0_DgsxW5i.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0_J3FP4z9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0_L4DeMLi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0_S0taU19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/u9352920842640874667fm27gp0_VNMREhN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/head_portrait/头像.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/headimages/头像.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/headimages/头像_HMYe47h.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/headimages/头像_YIhhy3D.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/add-article.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/add-article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/dologin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/dologin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/newlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/newlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/share.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/share.html" afterDir="false" />
-    </list>
+    <list default="true" id="b15910a5-fc80-4cd4-8d4f-68213cd2e55d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1885">
+            <state relative-caret-position="175">
               <caret line="216" column="37" selection-start-line="216" selection-start-column="37" selection-end-line="216" selection-end-column="37" />
               <folding>
                 <element signature="e#26#40#0" expanded="true" />
@@ -224,7 +189,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="195">
               <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
             </state>
           </provider>
@@ -309,8 +274,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="348" />
-    <option name="y" value="142" />
+    <option name="x" value="478" />
+    <option name="y" value="27" />
     <option name="width" value="1317" />
     <option name="height" value="692" />
   </component>
@@ -342,22 +307,6 @@
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -451,10 +400,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="348" y="142" width="1317" height="692" extended-state="0" />
+    <frame x="207" y="76" width="1317" height="692" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.14274509" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.14274509" />
       <window_info id="Structure" order="1" sideWeight="0.50151056" side_tool="true" weight="0.15294118" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -475,7 +424,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.1835294" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.1835294" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848944" visible="true" weight="0.14274509" />
@@ -738,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e5e4251c-b4e1-42a0-a3b3-bf56eef79da3/schema/blog/table/b_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -781,7 +720,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1885">
+        <state relative-caret-position="175">
           <caret line="216" column="37" selection-start-line="216" selection-start-column="37" selection-end-line="216" selection-end-column="37" />
           <folding>
             <element signature="e#26#40#0" expanded="true" />
@@ -791,9 +730,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="195">
           <caret line="110" column="31" lean-forward="true" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
         </state>
       </provider>

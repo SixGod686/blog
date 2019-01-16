@@ -227,6 +227,9 @@ def savedate(request):
     return render(request,'admin/index.html')
 
 def add_article(request):
+    token = request.COOKIES.get('token')
+    user = User.objects.get(token=token)
+    
     return render(request, 'admin/add-article.html')
 
 
